@@ -1,17 +1,17 @@
 import React from 'react'
+import {boxWidthFactor, staticColor, dynamicColor} from './constants'
 
 const boxWidthFactor = 8
 const staticColor = '#9E9E9E'
 const dynamicColor = '#3F51B5'
 
-const boxStyle = (i, hSize, w, scale, color) => {
+const boxStyle = (i, hSize, w, scale, background) => {
     const wSize = w / boxWidthFactor
     const width = `${wSize}px`
     const height = `${hSize * scale}px`
     const top = `${hSize * i}px`
     const left = `${w / 2 - wSize / 2}px`
     const position = 'absolute'
-    const background = color
     const color = 'white'
     const textAlign = 'center'
     return {width, height, position, left, top, background, color, textAlign}
@@ -32,8 +32,8 @@ export const TimeLineBox =  (props) => {
         </React.Fragment>
 }
 
-export const StartingBox = (props) => {
-    return <Box {...props} scale = {1} color = {dynamicColor}>
+export const StartingBox = ({w, hSize}) => {
+    return <Box i = {0} scale = {1} color = {dynamicColor}>
           Next
       </Box>
 }
