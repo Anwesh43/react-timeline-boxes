@@ -41,8 +41,11 @@ export const useDimension = () => {
         h,
 
         enableResize() {
-            setW(window.innerWidth)
-            setH(window.innerHeight)
+            window.onresize = () => {
+                setW(window.innerWidth)
+                setH(window.innerHeight)
+            }
+
         },
 
         disableResize() {
