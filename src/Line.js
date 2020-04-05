@@ -23,4 +23,4 @@ const Line = (props) => {
           </React.Fragment>
 }
 
-export default Line 
+export default Line
