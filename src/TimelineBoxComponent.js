@@ -8,7 +8,7 @@ const TimeLineBoxComponent = ({w, h, scale, hSize, i}) => {
     const scLine = divideScale(scale, 1, 2)
     return <div>
               <TimeLineBox i = {i} w = {w} hSize = {hSize} scale = {scBox}/>
-              <Line w = {w} h = {h} scale = {scale} hSize = {hSize}/>
+              <Line i = {i} w = {w} h = {h} scale = {scLine} hSize = {hSize}/>
           </div>
 }
 

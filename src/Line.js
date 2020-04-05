@@ -18,8 +18,8 @@ const LineDiv = ({hSize, w, h, i, background, scale}) =>{
 
 const Line = (props) => {
     return <React.Fragment>
-              <LineDiv {...props} scale = {0} background = {staticColor}/>
-              <LineDiv {...props} background = {dynamicColor}/>
+              <LineDiv {...props} scale = {1} i = {props.i * 2 + 2} background = {staticColor}/>
+              <LineDiv {...props} i = {props.i * 2 + 2} background = {dynamicColor}/>
           </React.Fragment>
 }
 

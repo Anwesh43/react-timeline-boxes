@@ -1,9 +1,6 @@
 import React from 'react'
 import {boxWidthFactor, staticColor, dynamicColor} from './constants'
 
-const boxWidthFactor = 8
-const staticColor = '#9E9E9E'
-const dynamicColor = '#3F51B5'
 
 const boxStyle = (i, hSize, w, scale, background) => {
     const wSize = w / boxWidthFactor
@@ -18,8 +15,9 @@ const boxStyle = (i, hSize, w, scale, background) => {
 }
 
 
-export const Box = ({i, scale, hSize, w, color, children}) => {
-    return (<div style = {boxStyle(i, hSize, w, scale, color)}>
+export const Box = ({i, scale, hSize, w, color, children, onClick}) => {
+  console.log(i, scale, hSize, w, color)
+    return (<div onClick = {onClick} style = {boxStyle(i, hSize, w, scale, color)}>
               {children}
           </div>)
 }
@@ -27,13 +25,13 @@ export const Box = ({i, scale, hSize, w, color, children}) => {
 export const TimeLineBox =  (props) => {
     return <React.Fragment>
 
-            <Box key = {`static_${i}`} {...props} color = {staticColor} scale = {1} i = {2 * props.i + 2}/>
-            <Box key = {`dynamic_${i}`} {...props} color = {dynamicColor} i = {2 * props.i + 2}/>
+            <Box key = {`static_${props.i}`} {...props} color = {staticColor} scale = {1} i = {2 * props.i + 2}/>
+            <Box key = {`dynamic_${props.i}`} {...props} color = {dynamicColor} i = {2 * props.i + 2}/>
         </React.Fragment>
 }
 
-export const StartingBox = ({w, hSize}) => {
-    return <Box i = {0} scale = {1} color = {dynamicColor}>
+export const StartingBox = ({w, hSize, onClick}) => {
+    return <Box i = {0} scale = {1} onClick = {onClick} color = {dynamicColor} w = {w} hSize = {hSize}>
           Next
       </Box>
 }

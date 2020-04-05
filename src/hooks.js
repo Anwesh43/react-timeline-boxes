@@ -1,14 +1,14 @@
 import {useState} from 'react'
 
 export const useAnimatedScale = (scGap, delay, n) => {
-    const [scale, setScale] = useState(scale, 0)
+    const [scale, setScale] = useState(0)
     const [animated, setAnimated] = useState(false)
     const [i, setI] = useState(0)
     const [dir, setDir] = useState(1)
 
     return {
         scale,
-        i, 
+        i,
         start() {
             if (!animated) {
                 let currScale = 0

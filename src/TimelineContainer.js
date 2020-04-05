@@ -1,5 +1,5 @@
 import {useAnimatedScale, useDimension} from './hooks'
-import TimeLineBoxComponent from './TimeLineBoxComponent'
+import TimeLineBoxComponent from './TimelineBoxComponent'
 import React from 'react'
 import {StartingBox} from './Box'
 
@@ -18,7 +18,7 @@ const TimelineContainer = ({n}) => {
     const hSize = h / (n * 2 + 1)
     return (<div>
             <StartingBox w = {w} hSize = {hSize}/>
-            <TimeLineBoxes w = {w} h = {h} hSize = {hSize} scale = {scale} j = {j}/>
+            <TimeLineBoxes w = {w} h = {h} hSize = {hSize} scale = {scale} j = {i} n = {n}/>
         </div>)
 }
 
