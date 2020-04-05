@@ -7,7 +7,7 @@ import TimelineContainer from './TimelineContainer'
 function App() {
   return (
     <div className="App">
-      <TimelineContainer n = {3}/>
+      <TimelineContainer texts = {["1st patient in wuhan", "chinese new year", "global outbreak"]}/>
     </div>
   );
 }
