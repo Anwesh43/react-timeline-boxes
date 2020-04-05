@@ -3,7 +3,7 @@ import Line from './Line'
 import {TimeLineBox} from './Box'
 import {divideScale} from './utils'
 
-const TimeLineBox = ({w, h, scale, hSize, i}) => {
+const TimeLineBoxComponent = ({w, h, scale, hSize, i}) => {
     const scBox = divideScale(scale, 0, 2)
     const scLine = divideScale(scale, 1, 2)
     return <div>
@@ -12,4 +12,4 @@ const TimeLineBox = ({w, h, scale, hSize, i}) => {
           </div>
 }
 
-export default TimeLineBox
+export default TimeLineBoxComponent

@@ -8,6 +8,7 @@ export const useAnimatedScale = (scGap, delay, n) => {
 
     return {
         scale,
+        i, 
         start() {
             if (!animated) {
                 let currScale = 0
