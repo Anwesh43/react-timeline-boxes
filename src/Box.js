@@ -27,8 +27,8 @@ export const Box = ({i, scale, hSize, w, color, children}) => {
 export const TimeLineBox =  (props) => {
     return <React.Fragment>
 
-            <Box key = {`static_${i}`} {...props} color = {staticColor} scale = {1} i = {props.i + 2}/>
-            <Box key = {`dynamic_${i}`} {...props} color = {dynamicColor} i = {props.i + 2}/>
+            <Box key = {`static_${i}`} {...props} color = {staticColor} scale = {1} i = {2 * props.i + 2}/>
+            <Box key = {`dynamic_${i}`} {...props} color = {dynamicColor} i = {2 * props.i + 2}/>
         </React.Fragment>
 }
 
