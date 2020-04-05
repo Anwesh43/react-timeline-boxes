@@ -17,7 +17,7 @@ const TimelineContainer = ({n}) => {
     const {start, scale, i} = useAnimatedScale(0.02, 30, n)
     const hSize = h / (n * 2 + 1)
     return (<div>
-            <StartingBox w = {w} hSize = {hSize}/>
+            <StartingBox w = {w} hSize = {hSize} onClick = {start}/>
             <TimeLineBoxes w = {w} h = {h} hSize = {hSize} scale = {scale} j = {i} n = {n}/>
         </div>)
 }

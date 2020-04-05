@@ -11,15 +11,16 @@ export const useAnimatedScale = (scGap, delay, n) => {
         i,
         start() {
             if (!animated) {
-                let currScale = 0
+                let currScale = scale
                 setAnimated(true)
                 const interval = setInterval(() => {
                     currScale += scGap * dir
                     setScale(currScale)
                     if (Math.abs(currScale - scale) > 1) {
-                        setScale(scale + dir)
-                        if (i + dir == n || i + dir == 0) {
+                        setScale(currScale - dir)
+                        if (i + dir == n || i + dir == -1) {
                             setDir(-dir)
+                            setScale(scale + dir)
                         } else {
                             setI(i + dir)
                         }

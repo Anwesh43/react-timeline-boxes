@@ -4,8 +4,8 @@ import {TimeLineBox} from './Box'
 import {divideScale} from './utils'
 
 const TimeLineBoxComponent = ({w, h, scale, hSize, i}) => {
-    const scBox = divideScale(scale, 0, 2)
-    const scLine = divideScale(scale, 1, 2)
+    const scBox = divideScale(scale, 1, 2)
+    const scLine = divideScale(scale, 0, 2)
     return <div>
               <TimeLineBox i = {i} w = {w} hSize = {hSize} scale = {scBox}/>
               <Line i = {i} w = {w} h = {h} scale = {scLine} hSize = {hSize}/>
